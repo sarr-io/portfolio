@@ -1,0 +1,160 @@
+body {
+    margin: 0px;
+    background-color: #0f0f10;
+}
+
+.middlemenu {
+    background-color: #121213;
+    width: 300px;
+    height: 340px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+}
+
+.title {
+    color: aliceblue;
+    font-family: Rubik;
+    font-weight: normal;
+    left: 150px;
+    top: 15px;
+    position: absolute;
+}
+
+.logo {
+    width: 18%;
+    height: 16%;
+    left: 70px;
+    top: 20px;
+    position: absolute;
+    border-radius: 45%;
+    box-shadow: 0px 5px 30px #ff9ee715;
+    object-fit: cover;
+}
+
+.buttons {
+    width: 80%;
+    height: 7%;
+    position: absolute;
+    top: 31%;
+    left: 20%;
+}
+
+.about  {
+    width: 65%;
+    height: 35%;
+    top: 43%;
+    left: 50px;
+    position: absolute;
+}
+
+.bigbuttons {
+    width: 75%;
+    height: 13%;
+    bottom: 10%;
+    left: 37px;
+    position: absolute;
+}
+
+.normal-button {
+    width: 40%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #0f0f10;
+    box-shadow: 0px 15px 20px #0e0e0e;
+    color: white;
+    font-family: Rubik;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin-left: 11px;
+    margin-right: 10px;
+    animation: unhover-anim 0.2s forwards;
+}
+
+.normal-button:hover {
+    animation: hover-anim 0.2s forwards;
+}
+
+.normal-button:active {
+    animation: click-anim 0.2s forwards;
+}
+
+.about-text {
+    font-family: Rubik;
+    font-size: 15px;
+    color: #dcdcdc;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}
+
+@keyframes hover-anim{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes unhover-anim{
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes click-anim{
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.style-button {
+    width: 10%;
+    height: 100%;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    animation: unhover-anim 0.2s forwards;
+    margin-right: 4px;
+    margin-left: 4px;
+    box-shadow: 0px 5px 15px #eeeeee0b;
+    background-color: #121213;
+}
+
+.style-button:hover {
+    animation: hover-anim 0.2s forwards;
+}
+
+.style-button:active {
+    animation: click-anim 0.2s forwards;
+}
+
+.button-icon {
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url("/src/fonts/Rubik-VariableFont_wght.ttf");
+}
