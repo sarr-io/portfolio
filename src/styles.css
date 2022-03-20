@@ -156,5 +156,5 @@ body {
 
 @font-face {
     font-family: Rubik;
-    src: url("/src/fonts/Rubik-VariableFont_wght.ttf");
+    src: url("/src/fonts/static/Rubik-Regular.ttf");
 }
