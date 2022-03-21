@@ -140,6 +140,7 @@ body {
 
 .style-button:hover {
     animation: hover-anim 0.2s forwards;
+    cursor: pointer;
 }
 
 .style-button:active {
