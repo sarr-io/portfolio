@@ -1,6 +1,11 @@
 body {
     margin: 0px;
     background-color: #0f0f10;
+    background-image: url(img/bg1.gif);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position-y: 30%;
+    background-blend-mode: color-dodge;
 }
 
 .middlemenu {
@@ -93,7 +98,7 @@ body {
 .about-text {
     font-family: Rubik;
     font-size: 15px;
-    color: #dcdcdc;
+    color: #f1e3f1;
     top: -10px;
     left: 10px;
     position: absolute;
@@ -102,9 +107,11 @@ body {
 @keyframes hover-anim{
     from {
         transform: scale(1);
+        opacity: 1;
     }
     to {
         transform: scale(0.9);
+        opacity: 0.5;
     }
 }
 
@@ -126,22 +133,31 @@ body {
     }
 }
 
+@keyframes scale-down {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 .style-button {
     width: 10%;
     height: 100%;
     border-radius: 10px 10px 10px 10px;
     border: none;
-    animation: unhover-anim 0.2s forwards;
+    animation: scale-down 0.5s forwards;
     margin-right: 4px;
     margin-left: 4px;
-    box-shadow: 0px 5px 15px #eeeeee0b;
+    box-shadow: 0px 15px 20px #0e0e0e;
     background-color: #121213;
 }
 
 .producer-text {
     font-family: Rubik;
     font-size: 15px;
-    color: #dcdcdc;
+    color: #f1f1f1;
 }
 
 .style-button:hover {
