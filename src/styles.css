@@ -4,9 +4,9 @@ body {
 }
 
 .middlemenu {
-    background-color: #121213e7;
-    width: 300px;
-    height: 340px;
+    background-color: #0e0e0ee7;
+    width: 240px;
+    height: 180px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,20 +21,23 @@ body {
 }
 
 .title {
+    position: relative;
     color: aliceblue;
     font-family: Titlefont;
     font-weight: normal;
-    font-size: 28px;
-    left: 150px;
-    top: 25px;
-    position: absolute;
+    font-size: 9px;
+    width: 50%;
+    left: 41%;
+    top: 18%;
+    overflow: hidden;
+    /* transform: rotate(-90deg); */
 }
 
 .logo {
-    width: 18%;
-    height: 16%;
-    left: 70px;
-    top: 30px;
+    width: 20.5%;
+    height: 28%;
+    left: 40px;
+    top: 35px;
     position: absolute;
     border-radius: 45%;
     box-shadow: 0px 5px 30px #ff9efd29;
@@ -42,11 +45,11 @@ body {
 }
 
 .buttons {
-    width: 80%;
-    height: 7%;
+    width: 77%;
+    height: 15%;
     position: absolute;
-    top: 31%;
-    left: 20%;
+    top: 65%;
+    left: 13.5%;
 }
 
 .about  {
@@ -140,15 +143,15 @@ body {
 }
 
 .style-button {
-    width:10%;
-    height: 100%;
+    width: 13%;
+    height: 90%;
     border-radius: 10px 10px 10px 10px;
     animation: scale-down 0.5s forwards;
     border: none;
     margin-right: 4px;
     margin-left: 4px;
     box-shadow: 0px 15px 20px #0e0e0e;
-    background-color: #121213;
+    background-color: #0f0f10;
 }
 
 .producer-text {
@@ -159,9 +162,9 @@ body {
 
 .worlds-text{
     font-family: Notosandsjap;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 1000;
     color: #f0f0f0;
-    margin-left: 20px;
 }
 
 .style-button:hover {
@@ -188,7 +191,7 @@ body {
 
 @font-face {
     font-family: Titlefont;
-    src: url(fonts/LibreBarcodeEAN13Text-Regular.ttf);
+    src: url(fonts/Hind-Regular.ttf);
 }
 
 @font-face {
