@@ -23,9 +23,9 @@ body {
 .title {
     position: relative;
     color: aliceblue;
-    font-family: Titlefont;
-    font-weight: 500;
-    font-size: 9px;
+    font-family: "Arial";
+    font-weight: Bold;
+    font-size: 11px;
     width: 50%;
     left: 40%;
     top: 18%;
