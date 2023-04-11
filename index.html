@@ -6,23 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sarrio</title>
     <link rel="stylesheet" href="src/styles.css">
+    <script type="text/javascript" src="src/scripts/animated.js"></script>
+    <script type="text/javascript" src="src/scripts/cursor.js"></script>
 </head>
-<body>
-    <div class="middlemenu">
-        <img class="logo" src="src/img/logo.png"><h2 class="title">PROGRAMMER, PRODUCER, ENGINEER, EDITOR, EXPLORING WORLDS</h2>
-        <div class="buttons">
-            <button onauxclick='window.open("https://www.youtube.com/channel/UCBRIpxR9Hwa9FPHxm3SkAlA")' onclick='window.open("https://www.youtube.com/channel/UCBRIpxR9Hwa9FPHxm3SkAlA")' class="style-button">
-            <img src="src/img/yt.png" class="button-icon">
-            </button> <button onauxclick='window.open("https://twitter.com/sarr_io")' onclick='window.open("https://twitter.com/sarr_io")' class="style-button">
-                <img src="src/img/twitter.png" class="button-icon">
-            </button> <button onauxclick='window.open("https://github.com/sarr-io")' onclick='window.open("https://github.com/sarr-io")' class="style-button">
-                <img src="src/img/github.png" class="button-icon">
-            </button> <button onauxclick='window.open("https://www.patreon.com/sarrio")' onclick='window.open("https://www.patreon.com/sarrio")' class="style-button">
-                <img src="src/img/patreon.png" class="button-icon">
-            </button> <button onauxclick='window.open("https://www.twitch.tv/sarr_io")' onclick='window.open("https://www.twitch.tv/sarr_io")' class="style-button">
-                <img src="src/img/twitch.png" class="button-icon">
-            </button>
-        </div>
+<body onload="randomizeFonts();">
+    <div class="text-button-holder">
+        <a class="text-button">me</a>
+        <a class="text-button">about</a>
+        <a class="text-button">projects</a>
+        <a class="text-button">contact</a>
     </div>
+    <div class="image-holder">
+        <img src="src/img/3.png" class="header-img">
+        <img src="src/img/2.png" class="header-img">
+        <img src="src/img/1.png" class="header-img">
+    </div>
+    <div class="link-button">
+        <button onauxclick='window.open("https://soundcloud.com/5arrio")' onclick='window.open("https://soundcloud.com/5arrio")' class="style-button">
+            <img src="src/img/soundcloud.png" class="button-icon">
+        </button>
+        
+        <button onauxclick='window.open("https://twitter.com/sarr_io")' onclick='window.open("https://twitter.com/sarr_io")' class="style-button">
+            <img src="src/img/twitter.png" class="button-icon">
+        </button> 
+        
+        <button onauxclick='window.open("https://github.com/sarr-io")' onclick='window.open("https://github.com/sarr-io")' class="style-button">
+            <img src="src/img/github.png" class="button-icon">
+        </button> 
+
+        <button onauxclick='window.open("https://www.youtube.com/channel/UCBRIpxR9Hwa9FPHxm3SkAlA")' onclick='window.open("https://www.youtube.com/channel/UCBRIpxR9Hwa9FPHxm3SkAlA")' class="style-button">
+            <img src="src/img/yt.png" class="button-icon">
+        </button> 
+        
+        <button onauxclick='window.open("https://www.twitch.tv/sarr_io")' onclick='window.open("https://www.twitch.tv/sarr_io")' class="style-button">
+            <img src="src/img/twitch.png" class="button-icon">
+        </button>
+
+        <button onauxclick='window.open("https://www.patreon.com/sarrio")' onclick='window.open("https://www.patreon.com/sarrio")' class="style-button">
+            <img src="src/img/patreon.png" class="button-icon">
+        </button>
+    </div>
+    
 </body>
 </html>
