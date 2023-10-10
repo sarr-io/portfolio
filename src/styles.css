@@ -41,7 +41,7 @@ body {
 }
 
 .dock {
-    width: 500px;
+    width: 400px;
     max-width: 50%;
     height: auto;
     max-height: 400px;
@@ -51,19 +51,14 @@ body {
 }
 
 .dock-items {
-    width: 100%;
-    height: 100%;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    gap: 10px;
 }
 
 .dock-item {
-    width: 90%;
-    padding-bottom: 5px;
-}
-
-.center-dock-item {
-    display: flex;
-    align-items: center;
+    width: auto;
 }
 
 .dock-title {
@@ -85,12 +80,14 @@ body {
 }
 
 .dock-image {
-    padding-top: 5px;
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 250px;
     border-radius: 5px;
     position: relative;
 
+    background-image: url("img/image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     filter: invert();
 }
 
