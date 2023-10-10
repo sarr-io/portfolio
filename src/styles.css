@@ -1,233 +1,386 @@
-html,body {
+html,
+body {
     margin: 0px;
-    background-color: #000000;
     overflow-x: hidden;
-}
 
-.text-button-holder {
-    position: fixed;
-    width: 100%;
-    height: 30%;
-    z-index: 1;
-
-    top: 10%;
-    right: -15%;
-
-    -ms-transform: 
-        perspective(100px)
-        rotateY(-10deg)
-        scale(0.25);
-    transform: 
-        perspective(100px)
-        rotateY(-10deg)
-        scale(0.25);
-
-    mix-blend-mode: difference;
-
-    text-align: right;
-}
-
-.image-holder {
-    position: absolute;
-    width: 50%;
-    height: 30%;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
     background-color: #000000;
-
-    overflow: hidden;
 }
 
-.link-button {
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/background.jpg");
+    filter: brightness(500%) blur(5px);
+    opacity: 0.2;
+
+    animation: bg-fade 10s forwards;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    height: 5%;
-    width: 25%;
-    
-    top: 10%;
-    left: 50%;
-    -ms-transform: 
-        translateX(-50%);
-    transform: 
-        translateX(-50%);
-    
-    text-align: center;
+
+    background-color: transparent;
 }
 
-.text-button {
-    position: relative;
-    width: 10%;
-    height: 40px;
+.top-bar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+}
 
+.dock {
+    width: 500px;
+    max-width: 50%;
+    height: auto;
+    max-height: 400px;
+
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+.dock-items {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.dock-item {
+    width: 90%;
+    padding-bottom: 5px;
+}
+
+.center-dock-item {
+    display: flex;
+    align-items: center;
+}
+
+.dock-title {
     color: #ffffff;
-    text-shadow: 0px 20px 10px #ffffff3b;
-    font-size: 100px;
-
-    margin-right: 10%;
-
-    animation: slide-fade 1s ease-in;
+    font-size: 20px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
 
-.text-button:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 4px;
-    cursor:pointer;
+.dock-description {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
 
-.style-button {
+.dock-image {
+    padding-top: 5px;
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
     position: relative;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
-
-    border: none;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 5px 30px #0000008c;
-    background-color: #0b0b0c;
-
-    animation: keep-scale 0.5s forwards;
-}
-
-.style-button:hover {
-    animation: hover-anim 0.2s forwards;
-    box-shadow: 0px 5px 20px #0000008c;
-    cursor: pointer;
 
     filter: invert();
 }
 
-.style-button:active {
-    animation: click-anim 0.2s forwards;
+.title-button {
+    padding-right: 3%;
+    position: relative;
+
+    color: #ffffff;
+    font-size: 20px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
 }
 
-.button-icon {
-    position: fixed;
-    width: 50%;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.title-button:hover {
+    text-decoration: underline;
 }
 
-.header-img {
-    width: 25%;
+.menu,
+.menu-links {
     height: auto;
-
-    filter: saturate(100%);
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    position: relative;
 }
 
-.header-img:hover {
-    filter: saturate(10%) invert();
+.menu {
+    width: 200px;
+    max-width: 20%;
 }
 
-@keyframes slide-fade{
-    from {
-        transform: translateY(-10px);
+.menu-links {
+    width: auto;
+}
+
+.menu-title {
+    color: #ffffffa1;
+    font-size: 20px;
+    font-family: "sinistre";
+    font-weight: 100;
+    letter-spacing: 2px;
+
+    animation: fade 10s forwards;
+}
+
+.menu-title:hover {
+    text-decoration: underline;
+}
+
+.menu-item {
+    color: #0000008b;
+    font-size: 20px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: #ffffffa1;
+    cursor: pointer;
+    animation: hover-slide 0.1s forwards;
+}
+
+.list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+
+    gap: 20px;
+}
+
+.list-item {
+    height: 150px;
+    width: 30%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.project-title {
+    padding-left: 20px;
+}
+
+.project-title-text {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.project-title-text:hover {
+    text-decoration: underline;
+}
+
+.project-description {
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+.project-description-text {
+    color: #ffffff;
+    font-size: 10px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.exploring-worlds-text {
+    color: #ffffffae;
+    font-size: 15px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.bottom-bar {
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    background-color: #000000;
+}
+
+.preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: invert();
+}
+
+.preview-text {
+    color: #000000;
+    font-size: 15px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.projects-preview-text {
+    color: #ffffffae;
+    font-size: 15px;
+    font-family: "sinistre";
+    font-weight: 83;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    animation: fade 10s forwards;
+}
+
+@keyframes hover-slide {
+    0% {
+        padding-left: 0px;
+    }
+
+    100% {
+        padding-left: 3px;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes fade-2 {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 20%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes bg-fade {
+    0% {
         opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
 
-@keyframes hover-anim{
-    from {
-        transform: scale(1);
-        opacity: 1;
     }
-    to {
-        transform: scale(0.9);
-        opacity: 1;
-    }
-}
 
-@keyframes unhover-anim{
-    from {
-        transform: scale(0.9);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-@keyframes click-anim{
-    from {
-        transform: scale(0.9);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-@keyframes keep-scale {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1);
+    100% {
+        opacity: 0.2;
     }
 }
 
 @font-face {
-    font-family: Taviraj-Black;
-    src: url(fonts/Taviraj-Black.ttf);
+    font-family: "stardom";
+    src: url("fonts/Stardom-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Taviraj-Bold;
-    src: url(fonts/Taviraj-Bold.ttf);
+    font-family: "bioma";
+    src: url("fonts/PlantasiaBioma-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Taviraj-Light;
-    src: url(fonts/Taviraj-Light.ttf);
+    font-family: "bioma";
+    src: url("fonts/PlantasiaBioma-Italic.otf") format("opentype");
+    font-style: italic
 }
 
 @font-face {
-    font-family: Taviraj-Regular;
-    src: url(fonts/Taviraj-Regular.ttf);
+    font-family: "sinistre";
+    src: url("fonts/SinistreVF.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Taviraj-BlackItalic;
-    src: url(fonts/Taviraj-BlackItalic.ttf);
+    font-family: "nyghtserif-regular";
+    src: url("fonts/NyghtSerif-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Taviraj-BoldItalic;
-    src: url(fonts/Taviraj-BoldItalic.ttf);
+    font-family: "nyghtserif-regularitalic";
+    src: url("fonts/NyghtSerif-RegularItalic.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Taviraj-LightItalic;
-    src: url(fonts/Taviraj-LightItalic.ttf);
+    font-family: "nyghtserif-light";
+    src: url("fonts/NyghtSerif-Light.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: Taviraj-Italic;
-    src: url(fonts/Taviraj-Italic.ttf);
+    font-family: "nyghtserif-lightitalic";
+    src: url("fonts/NyghtSerif-LightItalic.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: QuattrocentoSans-Bold;
-    src: url(fonts/QuattrocentoSans-Bold.ttf);
+    font-family: "nyghtserif-medium";
+    src: url("fonts/NyghtSerif-Medium.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: QuattrocentoSans-Regular;
-    src: url(fonts/QuattrocentoSans-Regular.ttf);
+    font-family: "nyghtserif-mediumitalic";
+    src: url("fonts/NyghtSerif-MediumItalic.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: QuattrocentoSans-Italic;
-    src: url(fonts/QuattrocentoSans-Italic.ttf);
+    font-family: "nyghtserif-bold";
+    src: url("fonts/NyghtSerif-Bold.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: QuattrocentoSans-BoldItalic;
-    src: url(fonts/QuattrocentoSans-BoldItalic.ttf);
+    font-family: "nyghtserif-bolditalic";
+    src: url("fonts/NyghtSerif-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "nyghtserif-dark";
+    src: url("fonts/NyghtSerif-Dark.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "nyghtserif-darkitalic";
+    src: url("fonts/NyghtSerif-DarkItalic.woff2") format("woff2");
 }
