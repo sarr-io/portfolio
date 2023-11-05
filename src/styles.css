@@ -13,11 +13,9 @@ body {
 
     background-position: center;
     background-size: cover;
-    background-image: url("img/background.jpg");
-    filter: brightness(500%) blur(5px);
-    opacity: 0.2;
-
-    animation: bg-fade 10s forwards;
+    background-image: url("img/background.png");
+    filter: blur(5px);
+    opacity: 0.5;
 }
 
 .container {
@@ -134,21 +132,19 @@ body {
     font-weight: 100;
     letter-spacing: 2px;
 
-    animation: fade 10s forwards;
-}
-
-.menu-title:hover {
-    text-decoration: underline;
+    animation: fade 1s forwards;
+    text-decoration: none;
 }
 
 .menu-item {
-    color: #0000008b;
+    color: #4c4c4c8b;
     font-size: 20px;
     font-family: "sinistre";
     font-weight: 83;
     letter-spacing: 2px;
     text-overflow: ellipsis;
     text-decoration: none;
+    animation: fade 3s forwards;
 }
 
 .menu-item:hover {
@@ -297,17 +293,6 @@ body {
 
     100% {
         opacity: 0%;
-    }
-}
-
-@keyframes bg-fade {
-    0% {
-        opacity: 0;
-
-    }
-
-    100% {
-        opacity: 0.2;
     }
 }
 
