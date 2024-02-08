@@ -14,8 +14,8 @@ body {
     background-position: center;
     background-size: cover;
     background-image: url("img/background.png");
-    filter: blur(5px);
-    opacity: 0.5;
+    filter: blur(4px);
+    opacity: 0.2;
 }
 
 .container {
@@ -31,11 +31,12 @@ body {
 
 .top-bar {
     width: 100%;
-    height: 100px;
+    height: 70px;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     position: fixed;
+    background-color: #000000;
 }
 
 .dock {
@@ -61,7 +62,7 @@ body {
 
 .dock-title {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "sinistre";
     font-weight: 83;
     letter-spacing: 2px;
@@ -90,11 +91,12 @@ body {
 }
 
 .title-button {
-    padding-right: 3%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
     position: relative;
 
     color: #ffffff;
-    font-size: 20px;
+    font-size: 15px;
     font-family: "sinistre";
     font-weight: 83;
     letter-spacing: 2px;
@@ -137,7 +139,7 @@ body {
 }
 
 .menu-item {
-    color: #4c4c4c8b;
+    color: #c5c5c5;
     font-size: 20px;
     font-family: "sinistre";
     font-weight: 83;
@@ -145,6 +147,7 @@ body {
     text-overflow: ellipsis;
     text-decoration: none;
     animation: fade 3s forwards;
+    mix-blend-mode: color-dodge;
 }
 
 .menu-item:hover {
@@ -186,9 +189,9 @@ body {
 
 .project-title-text {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 16px;
     font-family: "sinistre";
-    font-weight: 83;
+    font-weight: 150;
     letter-spacing: 2px;
     text-decoration: none;
 }
@@ -204,7 +207,7 @@ body {
 
 .project-description-text {
     color: #ffffff;
-    font-size: 10px;
+    font-size: 12px;
     font-family: "sinistre";
     font-weight: 83;
     letter-spacing: 2px;
@@ -274,7 +277,7 @@ body {
 
 @keyframes fade {
     0% {
-        opacity: 0%;
+        
     }
 
     100% {
