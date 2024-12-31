@@ -7,42 +7,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sarrio</title>
     <link rel="stylesheet" href="src/styles.css">
+
+    <script src="src/index.js"></script>
+    <script src="src/cursor_decoration.js"></script>
 </head>
 
-<body>
-    <div class="background"></div>
-    <div class="container">
-        <div class="menu">
-            <a class="menu-title" href="links.html">links</a>
-            <a class="menu-item" href="https://youtube.com/@prod5arrio" target="_blank">yt</a>
-            <a class="menu-item" href="https://github.com/sarr-io" target="_blank">github</a>
-            <a class="menu-item" href="https://twitter.com/sarr_io" target="_blank">twitter</a>
-            <a class="menu-item" href="https://open.spotify.com/user/v1p6zwjrxjzvgvm7bblq5838w?si=677eddb6ed7248df"
-                target="_blank">spotify</a>
-            <a class="menu-item" href="https://soundcloud.com/5archive" target="_blank">soundcloud</a>
-            <a class="menu-item" href="https://www.instagram.com/5arrio/" target="_blank">ig</a>
-        </div>
-        <div class="dock">
-            <div class="dock-items">
-                
-                <div class="dock-item">
-                    <a class="dock-description">programmer, producer, music enjoyer,</a>
-                    <br> <a class="dock-description exploring-worlds-text">
-                        exploring worlds .</a>
-                </div>
-                <div class="dock-item">
-                    <div class="dock-image"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bottom-bar">
-        <div class="preview">
-            <a class="preview-text">more coming soon</a>
-        </div>
-    </div>
+<body class="background">
     <div class="top-bar">
-        <a class="title-button" href="index.html">abt me</a><a class="title-button" href="projects.html">projects</a>
+        <a class="bar-title" href="index.html">about</a>
+        <a class="bar-title" href="projects.html">projects</a>
+        <a class="bar-title" href="contact.html">contact</a>
+    </div>
+    
+    <div class="floating-dock">
+        <a class="title">about & socials </a>
+        <a class="desc"> programmer, producer, music enjoyer, exploring worlds . </a>
+        <a class="desc"> i also work on hardware projects and enjoy virtual photography  </a>
+        <a class="desc"> my links are below: </a>
+        <div class="dock-socials">
+            <button class="socials" data-link="https://github.com/sarr-io">
+                <img class="icon" src="src/img/icons/github.svg" alt="github"></button>
+            <button class="socials" data-link="https://twitter.com/sarr_io">
+                <img class="icon" src="src/img/icons/twitter.svg" alt="twitter"></button>
+            <button class="socials" data-link="https://www.instagram.com/5arrio/">
+                <img class="icon" src="src/img/icons/instagram.svg" alt="instagram"></button>
+            <button class="socials" data-link="https://soundcloud.com/5arrio">
+                <img class="icon" src="src/img/icons/soundcloud.svg" alt="soundcloud"></button>
+        </div>
     </div>
 </body>
 
