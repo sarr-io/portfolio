@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sarrio</title>
     <link rel="stylesheet" href="src/styles.css">
-
-    <script src="src/cursor_decoration.js"></script>
 </head>
 
 <body>
@@ -17,8 +15,108 @@
         <a class="bar-title" href="projects.html">projects</a>
         <a class="bar-title" href="contact.html">contact</a>
     </div>
-    <div class="centered_empty">
-        <a class="unfinished">check back later</a>
+    <div class="reel-container">
+        <div class="dock-reel">
+            <div class="floating-dock">
+                <a class="title">projects </a>
+                <a class="desc">note that this is a static site; i manually cherrypicked each of the projects listed.</a>
+                <a class="desc end">i will likely prioritize some of my larger and more meaningful projects over smaller ones. please check my github and other links to see more of my work.</a>
+            </div>
+            <div class="floating-dock">
+                <a class="title">simple password generator</a>
+                <div class="desc used-programs-container">
+                    <div class="used-program">
+                        <img class="program-icon" src="src/img/icons/vscode.svg" alt="vscode"></div>
+                </div>
+                <a class="desc">as my first zig project, i made a simple password generator.</a>
+                <a class="desc">it opens, generates a password according to settings.json, copies it to your clipboard, and closes (all within a couple milliseconds).</a>
+                <a class="desc">on top of this, your recently generated passwords are saved to a log.txt with generic timestamps next to them just in case you lose it. this file will clear itself after it hits 1mb, and should not be used for permanent password storage.</a>
+                <a class="desc end link" href="https://github.com/sarr-io/password-generator">you can download it here</a>
+            </div>
+            <div class="floating-dock">
+                <a class="title">vr brutalist art experience </a>
+                <div class="desc used-programs-container">
+                    <div class="used-program">
+                        <img class="program-icon" src="src/img/icons/unity.svg" alt="unity"></div>
+                    <div class="used-program">
+                        <img class="program-icon" src="src/img/icons/blender.svg" alt="blender"></div>
+                    <div class="used-program">
+                        <img class="program-icon" src="src/img/icons/vscode.svg" alt="vscode"></div>
+                    <div class="used-program">
+                        <img class="program-icon" src="src/img/icons/flstudio.png" alt="flstudio"></div>
+                </div>
+                <div class="project-image-container">
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/atmosphaera/1.png" alt="slimevr"></div>
+                </div>
+                <a class="desc">after exploring various brutalist creations in vrchat, i realized just how much the style resonates with me. i admire the starkness and unexpected earthiness of brutalism.</a>
+                <a class="desc">while it may seem pessimistic to some, it strikes me as more of a realistic reflection on a dystopian future. it feels linked to our civilization's existence——grounded yet distant, almost like a cautionary message.</a>
+                <a class="desc">this style of art inspired me, and i really wanted to make my own brutalist piece.</a>
+                <a class="desc">i started by writing down some phisosophical ideas that i wanted to represent within my world. i wanted to symbolize personal growth, alongside the trap of stillness and becoming too comfortable.</a>
+                <div class="project-image-container">
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/atmosphaera/3.png" alt="slimevr"></div>
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/atmosphaera/2.png" alt="slimevr"></div>
+                </div>
+                <a class="desc">after getting an idea of the experience i wanted to create, i modeled the world in blender. it was split into two halves: the bottom representing the past, and the top (where you start) representing the present.</a>
+                <div class="project-image-container">
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/atmosphaera/4.png" alt="slimevr"></div>
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/atmosphaera/5.png" alt="slimevr"></div>
+                </div>
+                <a class="desc">then i moved it into unity, adding materials and extra details to the model. i also created sound systems for velocity-based wind distortion and grass footsteps to bring more presence to the experience.</a>
+                <a class="desc">a big part of the world is the grass shader, which i put together with claude, as i don't know hlsl. i knew i wanted quad-based grass using a given texture, so i started with that and prompted until it had the feature set it does now (perlin noise wind movement, distance-shrinking, color and size variation, etc.).</a>
+                <a class="desc">to bring the entire experience together, i put together two ambient soundtracks for the top and bottom halves of the world.</a>
+                <a class="desc">the world has performed extrememly well, reaching 200 favorites in only a week <3</a>
+                <div class="project-image-container">
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/atmosphaera/6.png" alt="slimevr"></div>
+                </div>
+                <a class="desc end link" href="https://vrchat.com/home/launch?worldId=wrld_639f196b-f00b-41da-a5f2-95bc1aa63105">you can visit it here</a>
+            </div>
+        </div>
+        <div class="dock-reel">
+            <div class="floating-dock">
+                <a class="title">virtual reality & motion capture trackers</a>
+                <div class="desc used-programs-container">
+                    <div class="used-program">
+                        <img class="program-icon whiteout" src="src/img/icons/kicad.svg" alt="kicad"></div>
+                    <div class="used-program">
+                        <img class="program-icon larger-icon" src="src/img/icons/fusion360.svg" alt="fusion360"></div>
+                </div>
+                <div class="project-image-container">
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/trackers/1.jpg" alt="slimevr"></div>
+                    
+                </div>
+                <a class="desc">in early 2024 i began working on a pcb for SlimeVR full-body tracking, intending to only make them for personal use.</a>
+                <div class="project-image-container">
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/trackers/3.jpg" alt="slimevr"></div>
+                    <div class="project-image-slice">
+                        <img class="project-image" src="src/img/projects/trackers/2.jpg" alt="slimevr"></div>
+                </div>
+                <a class="desc">four revisions and countless hours of work later, i have landed on one of the most cost-efficient wifi-based designs in the community. this shifted my focus to turning these trackers into a real product.</a>
+                <a class="desc">over the course of this project, i have learned so much about pcb design, creating clean smps layouts, and spending months debugging esp32 chips——only to discover i was supplied locked chips (thanks, mouser).</a>
+                <a class="desc">these trackers started as something i personally wanted to use and are still designed with that in mind: the best possible wifi-based SlimeVR trackers for myself and others. a solid imu with ~18h battery life in a small, lightweight form factor (44x44x18mm, ~50g).</a>
+                <a class="desc end">they will hit the market in 2025 after i get through validation and confirm additional purchasing options (charging dock, material customizations, etc.).</a>
+            </div>
+            <div class="floating-dock">
+                <a class="title">mineimator to blockbench frame converter</a>
+                <div class="desc used-programs-container">
+                    <div class="used-program">
+                        <img class="program-icon" src="src/img/icons/vscode.svg" alt="vscode"></div>
+                </div>
+                <a class="desc">one of my friends was frustrated with the animation tools he used for minecraft projects. he wanted the animation capability of mineimator and the 3d modeling of blockbench in one.</a>
+                <a class="desc">using a blockbench plugin called "animated java", he could get some barebones animation support (not very user friendly), but more importantly, a json holding keyframe data.</a>
+                <a class="desc">i analyzed the keyframe output of mineimator and compared it to animated java's json output, brainstorming how i might convert one format to the other.</a>
+                <a class="desc">using zig's standard library json capabilities, i was able to come up with a fairly efficient O(n) (per file) method for converting the data.</a>
+                <a class="desc">while my friend's use case is very niche, someone out there might find it helpful.</a>
+                <a class="desc end link" href="https://github.com/sarr-io/mineimator-to-blockbench">you can download it here</a>
+            </div>
+        </div>
     </div>
 </body>
 

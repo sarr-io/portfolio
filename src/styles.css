@@ -1,7 +1,7 @@
 html,
 body {
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     height: 100%;
 }
 
@@ -14,6 +14,7 @@ body {
 
 .background {
     background: linear-gradient(180deg, rgba(8, 8, 9, 0.5) 0%, rgb(8, 8, 9) 50%), url("img/bg.png");
+    overflow: hidden;
 }
 
 .top-bar {
@@ -29,7 +30,9 @@ body {
 
     display: flex;
     justify-content: center;
-    padding-left: 20px;
+    gap: 50px;
+
+    z-index: 1;
 }
 
 .bar-title {
@@ -40,11 +43,26 @@ body {
     text-decoration: none;
 
     margin-top: 55px;
-    margin-right: 50px;
 }
 
 .floating-dock {
+    position: relative;
+    
+    background-color: rgba(16, 16, 17, 0.99);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1.5px;
+    border-color: rgba(243, 243, 243, 0.1);
+}
+
+.standalone {
     position: absolute;
+
     width: 500px;
     max-width: 60%;
     height: auto;
@@ -52,17 +70,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(16, 16, 17, 0.99);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
     margin: 5px;
-
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 1.5px;
-    border-color: rgba(243, 243, 243, 0.1);
 
     box-shadow: 0px 0px 40px 10px rgba(8, 8, 9, 1);
 }
@@ -161,6 +169,114 @@ body {
 
     font-family: 'FairfaxHD';
     font-size: 1.25em;
+}
+
+.end {
+    margin-bottom: 10px;
+}
+
+.reel-container {
+    position: absolute;
+    width: 60%;
+    height: auto;
+
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    gap: 10px;
+    align-items: start;
+}
+
+.dock-reel {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: start;
+}
+
+.used-programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.used-program {
+    position: relative;
+
+    width: 30px;
+    height: 30px;
+
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1.5px;
+    border-color: rgba(243, 243, 243, 0.05);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.program-icon {
+    width: 50%;
+    margin: 25%;
+}
+
+.larger-icon {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+}
+
+.whiteout {
+    filter: invert(98%) sepia(1%) saturate(1642%) hue-rotate(303deg) brightness(114%) contrast(91%); /* black -> 243, 243, 243 */
+}
+
+.project-image-container {
+    position: relative;
+    overflow: hidden;
+
+    width: 95%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 1.5px;
+    border-color: rgba(243, 243, 243, 0.05);
+}
+
+.project-image-slice {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link {
+    color: rgb(151, 224, 230);
+
+    font-family: 'FairfaxHD';
+    font-size: 1.25em;
+    text-decoration: underline;
 }
 
 @keyframes fadeSocialsBorderIn {
